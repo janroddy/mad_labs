@@ -54,7 +54,7 @@ ROOT_URLCONF = 'MadLads.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['MadLads/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
