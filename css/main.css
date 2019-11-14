@@ -1,4 +1,5 @@
 /* main.css */
+/* color pallet: blue accent color #0099cc; */
 
 
 .container {
@@ -21,4 +22,7 @@
 
 .intro-message {
 	text-align: center;
+}
+.logo {
+	floar: left;
 }
