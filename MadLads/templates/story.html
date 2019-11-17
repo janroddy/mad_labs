@@ -5,32 +5,43 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
     <title>Mad Lads</title>
   </head>
-  <div> 
+  <div class="sidebar"> 
     <h3 id="logo">MadLads.</h3>
   <div> 
   <div class="header">
     <ul>
       <li><a href="about.html">About the MadLads/Ladies</a></li>
       <li><a href="how-to-play.html">How to Play</a></li>
-      <li><a href="story.html">Story Categories</a></li>
+      <li><a href="categories.html">Story Categories</a></li>
       <li><a href="index.html">Home</a></li>
     </ul>
   <div>
-
   <body>
 
-    <div class="homepage-container">
+    <div class="container">
+      <div id="questions">
+        <h1>Please fill out the following!</h1>
+        <form role="form"></form>
+        <hr>
+        <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
+      </div>  
 
-        <h1>Hello Mad Ladies & Lads!</h1>
-        <img id="mad-bunny" src="img/bunny.jpeg" alt="Crazy Mad Bunny">
- 
-       
+=
+      <!-- start story -->
+    <div id="story">
+    <h1>Mad Pride and Prejudice</h1>
+    <hr>
+    
+    <h3 id="mad-story"></h3> 
+
+      <div>
+        <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+      </div>
     </div>
-    <div >
-      <a id="choose-story" href="story.html">Choose a Story!</a>
+    <!-- end story -->
     </div>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-  <!--  <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
   </body>
 </html>
