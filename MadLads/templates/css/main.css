@@ -16,11 +16,27 @@
 #choose-story:hover {
   color: #0099cc;
 
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 100px;
+  font-size: 25px;
+  border: solid #0099cc;
+
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
+}
 
 .container {
   padding-top: 50px;
   max-width: 500px;
+
 
 }
 
@@ -36,6 +52,7 @@
   border: 2px solid #0099cc; 
 
 }
+
 
 .intro-message {
 	text-align: center;
@@ -79,12 +96,19 @@ li a {
   
 }
 
-
 li a:hover {
 /*  color: #0099cc; */
   color: black;
   text-decoration: underline;
 }
 
+#story-title {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding: 50px;
+}
 
 

@@ -1,6 +1,8 @@
 
 //This function runs as soon as the page loads
 $(document).ready(function() {
+	$("#story-title").empty().append(storyName);
+
 	$("#story").hide();
 	produceInputForms(arr);
 
@@ -34,6 +36,7 @@ $("#btn-click").click(function(e) {
 //global variable to store the userInput      
 userInput = [];
 //sample array and story for testing purposes 
+var storyName = "Mad Pride and Prejudice"
 arr = ["noun", "verb", "adjective", "name"]
 var madStory = "One morning, about a week after Bingley's engagement with <span id='in0'></span> had been formed, as he and the females of the family were sitting together in the dining-room, their attention was suddenly drawn to the window, by the sound of a carriage; and they perceived a chaise and four driving up the lawn."
 
