@@ -2,18 +2,19 @@
 <html>
   <head>
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+    {% load static %}
+    <link href="{% static '/css/main.css'%}" rel="stylesheet" type="text/css" media="all">
     <title>Mad Lads</title>
   </head>
-  <div> 
+  <div>
     <h3 id="logo">MadLads.</h3>
-  <div> 
+  <div>
   <div class="header">
     <ul>
-      <li><a href="about.html">About the MadLads/Ladies</a></li>
-      <li><a href="how-to-play.html">How to Play</a></li>
-      <li><a href="categories.html">Story Categories</a></li>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/about">About the MadLads/Ladies</a></li>
+      <li><a href="/how-to-play">How to Play</a></li>
+      <li><a href="/categories">Story Categories</a></li>
+      <li><a href="/home">Home</a></li>
     </ul>
   <div>
 
@@ -22,7 +23,7 @@
       <h1 class="title">Choose a Mad Story Category!</h1>
     </div>
     <div class="categories-container">
-      <div class="column"> <a href="story.html"> Mad Classics </div>
+      <div class="column"> <a href="/story"> Mad Classics </div>
       <div class="column">Stories by Mad Sean</div>
       <div class="column">All Mad Titles (A-Z)</div>
       <div class="column">Mad Random Story</div>
