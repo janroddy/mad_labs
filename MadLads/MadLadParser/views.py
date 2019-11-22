@@ -1,6 +1,5 @@
 from django.shortcuts import render
-
-from .models import Story
+from django.http import HttpResponse
 
 from MadLadParser import Controller
 
@@ -18,9 +17,15 @@ def display_howToPlay(request):
     return render(request, 'how-to-play.html')
 
 def display_story(request):
+    return render(request, 'story.html')
 
-    #story = Story.objects.get(pk=1).story_array
-    #story = "noun,verb,adjective,name"
+def get_story(request):
+    
     story = Controller.getStoryArray(1)
+    return HttpResponse(story, content_type='text/plain')
 
-    return render(request, 'story.html', {'Story' : story})
+def display_ShowStory(request):
+
+    storyInfo = Controller.parseStoryText(1)
+
+    return HttpResponse(storyInfo, content_type='text/plain')

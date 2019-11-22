@@ -24,9 +24,8 @@
         <h2>Please fill out the following!</h2>
         <form role="form"></form>
         <hr>
-        <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
+      <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
       </div>
-
 
       <!-- start story -->
 
@@ -45,12 +44,6 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="{% static '/js/main.js'%}"></script>
     <div class="">
-        {% if Story %}
-          <script type="text/javascript">
-            console.log("{{Story}}");
-            produceInputForms("{{Story}}");
-          </script>
-        {% endif %}
     </div>
   </body>
 </html>
