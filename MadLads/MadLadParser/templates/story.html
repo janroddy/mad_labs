@@ -45,13 +45,11 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="{% static '/js/main.js'%}"></script>
     <div class="">
-        {% if dick %}
-          {% for array in Story %}
-            <script type="text/javascript">
-              console.log(Story);
-              //produceInputForms(array.value);
-            </script>
-          {% endfor %}
+        {% if Story %}
+          <script type="text/javascript">
+            console.log("{{Story}}");
+            produceInputForms("{{Story}}");
+          </script>
         {% endif %}
     </div>
   </body>

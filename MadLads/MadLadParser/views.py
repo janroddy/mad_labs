@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from .models import Story
 
+from MadLadParser import Controller
+
 # Create your views here.
 def display_home(request):
     return render(request, 'index.html')
@@ -17,5 +19,8 @@ def display_howToPlay(request):
 
 def display_story(request):
 
-    story = {"noun,verb,adjective,name"}
+    #story = Story.objects.get(pk=1).story_array
+    #story = "noun,verb,adjective,name"
+    story = Controller.getStoryArray(1)
+
     return render(request, 'story.html', {'Story' : story})

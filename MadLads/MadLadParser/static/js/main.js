@@ -37,16 +37,15 @@ $("#btn-click").click(function(e) {
 userInput = [];
 //sample array and story for testing purposes
 var storyName = "Mad Pride and Prejudice"
-arr = ["noun", "verb", "adjective", "name"]
+//arr = ["noun", "verb", "adjective", "name"]
 var madStory = "One morning, about a week after Bingley's engagement with <span id='in0'></span> had been formed, as he and the females of the family were sitting together in the dining-room, their attention was suddenly drawn to the window, by the sound of a carriage; and they perceived a chaise and four driving up the lawn."
 
 //arr is am array with they number and types of words for the user to input
-function produceInputForms(arr) {
-	var count = 0;
-	for (word in arr) {
-		$("form").append("<label for='box" + count + "'> Enter a " + word + "</label>" + "<br>");
-		$("form").append("<input id='box" + count + "'>" + "<br>");
-		count++;
+function produceInputForms(str) {
+	arr = str.split(',');
+	for (var i = 0; i < arr.length; i++) {
+		$("form").append("<label for='box" + i + "'> Enter a " + arr[i] + "</label>" + "<br>");
+		$("form").append("<input id='box" + i + "'>" + "<br>");
 	}
 	/*
 	arr.forEach(element => $("form").append("<label for=box" + count + "> Enter a " + element + "</label>" + "<br>" + "<input>" + "<br>"
