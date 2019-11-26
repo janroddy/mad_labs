@@ -28,6 +28,18 @@ $("#btn-click").click(function(e) {
 	//add input to userInput array
 		userInput.push(input);
 	}
+	console.log(userInput.join())
+	$.ajax({
+	    url: '/send',
+	    type: 'post', // This is the default though, you don't actually need to always mention it
+			data: userInput.join(),
+	    success: function(data) {
+	       console.log(data);
+	    },
+	    failure: function(data) {
+	        alert('Got an error dude');
+	    }
+	});
 	$.ajax({
 	    url: '/show',
 	    type: 'get', // This is the default though, you don't actually need to always mention it
