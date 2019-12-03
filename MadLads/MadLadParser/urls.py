@@ -12,4 +12,8 @@ urlpatterns = [
     url(r'^get/$', views.get_story, name='get_story'),
     url(r'^send/$', views.send_input, name='send_input'),
     url(r'^show/$', views.display_ShowStory, name='display_ShowStory'),
+
+    url(r'^set/$', views.set_story, name='set_story'),
+    url(r'^StoryList/$', views.display_StoryList, name='display_StoryList'),
+    url(r'^get/story-list/$', views.get_storyList, name='get_storyList'),
 ]

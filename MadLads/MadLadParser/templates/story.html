@@ -24,26 +24,24 @@
         <h2>Please fill out the following!</h2>
         <form role="form"></form>
         <hr>
-      <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
+        <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
       </div>
 
       <!-- start story -->
 
-    <div id="story">
-      <hr>
-      <img  src="{%static '/img/p&p.jpg'%}" alt="Pride and Prejudice">
-      <h3 id="mad-story"></h3>
-
-    <div>
-        <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+      <div id="story">
+        <hr>
+      <!--<img  src="{%static '/img/p&p.jpg'%}" alt="Pride and Prejudice"> -->
+        <p id="mad-story"></p>
+        <div>
+          <hr>
+          <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+        </div>
       </div>
-    </div>
     <!-- end story -->
     </div>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="{% static '/js/main.js'%}"></script>
-    <div class="">
-    </div>
   </body>
 </html>

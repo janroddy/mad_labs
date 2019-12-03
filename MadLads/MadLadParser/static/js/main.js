@@ -22,17 +22,20 @@ $(document).ready(function() {
 //On the button click save the user input and display the story
 $("#btn-click").click(function(e) {
 	arr = getStr().split(',');
-	console.log()
+	userInput = new Array(arr.length);
 	for (var i = 0; i < arr.length; i++) {
 		var input = $("#box" + i).val();
+		userInput[i] = input;
 	//add input to userInput array
-		userInput.push(input);
 	}
-	console.log(userInput.join())
+	userInput = userInput.join();
+	console.log(userInput)
 	$.ajax({
-	    url: '/send',
+	    url: '/send/',
 	    type: 'post', // This is the default though, you don't actually need to always mention it
-			data: userInput.join(),
+			data: {
+				'UserInput': userInput
+			},
 	    success: function(data) {
 	       console.log(data);
 	    },
@@ -44,7 +47,7 @@ $("#btn-click").click(function(e) {
 	    url: '/show',
 	    type: 'get', // This is the default though, you don't actually need to always mention it
 	    success: function(data) {
-	       console.log(data);
+	       //console.log(data);
 				 produceStory(data);
 	    },
 	    failure: function(data) {
@@ -64,11 +67,10 @@ function produceInputForms(str) {
 
 	//THIS STUFF IS ADDED BY KODY AS A TEST.
 function produceStory(storyInfo){
-		arr = storyInfo.split(',');
+		arr = storyInfo.split('^');
 		var storyName = arr[0];
 		var story = arr[1];
 
-		console.log(userInput[0]);
 		$("#story-title").empty().append(storyName);
 
 		$("#in0").empty().append($(userInput[0]));
