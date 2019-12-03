@@ -1,5 +1,13 @@
 /* main.css */
 /* color pallet: blue accent color #0099cc; */
+p {
+  font-size: 30px;
+}
+h1 {
+  font-size: 35px;
+}
+
+
 
 #choose-story {
   background-color: white;
@@ -37,7 +45,6 @@
   padding-top: 50px;
   max-width: 500px;
 
-
 }
 
 .container button{
@@ -49,7 +56,7 @@
 .container button:hover{
   background-color: white;
   color: black;
-  border: 2px solid #0099cc; 
+  border: 2px solid #0099cc;
 
 }
 
@@ -67,7 +74,7 @@
 }
 
 #logo {
-  float: left; 
+  float: left;
   color: #0099cc;
   padding-left: 10px;
 }
@@ -93,7 +100,7 @@ li a {
   color: black;
   text-align: center;
   padding: 14px 16px;
-  
+
 }
 
 li a:hover {
@@ -110,5 +117,3 @@ li a:hover {
   text-align: center;
   padding: 50px;
 }
-
-

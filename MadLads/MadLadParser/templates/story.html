@@ -2,18 +2,19 @@
 <html>
   <head>
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+    {% load static %}
+    <link href="{% static '/css/main.css'%}" rel="stylesheet" type="text/css" media="all">
     <title>Mad Lads</title>
   </head>
-  <div class="sidebar"> 
+  <div class="sidebar">
     <h3 id="logo">MadLads.</h3>
-  <div> 
+  <div>
   <div class="header">
     <ul>
-      <li><a href="about.html">About the MadLads/Ladies</a></li>
-      <li><a href="how-to-play.html">How to Play</a></li>
-      <li><a href="categories.html">Story Categories</a></li>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/about">About the MadLads/Ladies</a></li>
+      <li><a href="/how-to-play">How to Play</a></li>
+      <li><a href="/categories">Story Categories</a></li>
+      <li><a href="/home">Home</a></li>
     </ul>
   <div>
   <body>
@@ -24,24 +25,23 @@
         <form role="form"></form>
         <hr>
         <button type="submit" id="btn-click" class="btn btn-primary btn-md">Generate a Mad Story!</button>
-      </div>  
-
- 
-      <!-- start story -->
-    
-    <div id="story">
-      <hr> 
-      <img  src="img/p&p.jpg" alt="Pride and Prejudice">
-      <h3 id="mad-story"></h3> 
-
-    <div>
-        <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
       </div>
-    </div>
+
+      <!-- start story -->
+
+      <div id="story">
+        <hr>
+      <!--<img  src="{%static '/img/p&p.jpg'%}" alt="Pride and Prejudice"> -->
+        <p id="mad-story"></p>
+        <div>
+          <hr>
+          <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+        </div>
+      </div>
     <!-- end story -->
     </div>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static '/js/main.js'%}"></script>
   </body>
 </html>
