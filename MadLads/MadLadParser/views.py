@@ -6,7 +6,7 @@ from MadLadParser import Story
 from MadLadParser import Controller
 
 StoryObject = None
-Controller = Controller.Controller()
+controller = None
 
 # Create your views here.
 def display_home(request):
@@ -18,8 +18,29 @@ def display_about(request):
 def display_categories(request):
     return render(request, 'categories.html')
 
-def display_StoryList(request):
+
+#SPECIFIC CATEGORY OF STORIES
+def display_StoryList_Classics(request):
+    global controller
+    controller = Controller.Controller('Classics')
     return render(request, 'story-list.html')
+
+def display_StoryList_by_Sean(request):
+    global controller
+    controller = Controller.Controller('by Sean')
+    return render(request, 'story-list.html')
+
+def display_StoryList_All_Titles(request):
+    global controller
+    controller = Controller.Controller()
+    return render(request, 'story-list.html')
+
+def display_StoryList_Random(request):
+    global controller
+    controller = Controller.Controller('Random')
+    return render(request, 'story-list.html')
+
+#END SPECIFIC CATEGORIES
 
 def display_howToPlay(request):
     return render(request, 'how-to-play.html')
@@ -30,7 +51,7 @@ def display_story(request):
 @csrf_exempt
 def get_storyList(request):
     print("get_storyList was called")
-    storyList = Controller.getStoryList()
+    storyList = controller.getStoryList()
     return HttpResponse(storyList, content_type='application/json')
 
 @csrf_exempt
@@ -39,7 +60,7 @@ def set_story(request):
     pk = request.POST.get("id","")
     print(pk)
     pkAsInt = int(pk)
-    StoryObject = Story.Story(pkAsInt + 1)
+    StoryObject = Story.Story(pkAsInt)
     return HttpResponse("Set story was called", content_type='text/plain')
 
 @csrf_exempt
