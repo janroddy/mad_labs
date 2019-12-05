@@ -22,7 +22,9 @@ def display_about(request):
 def display_categories(request):
     print("-----%s was called-----" % inspect.stack()[0][3])
     return render(request, 'categories.html')
-
+def display_help(request):
+    print("-----%s was called-----" % inspect.stack()[0][3])
+    return render(request, 'help.html')
 
 #SPECIFIC CATEGORY OF STORIES
 def display_StoryList_Classics(request):
