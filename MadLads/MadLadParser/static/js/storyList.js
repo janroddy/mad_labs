@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
   console.log("Calling Server for Story List")
+
   $.ajax({
     url:'/get/story-list',
     type: 'get',
@@ -41,8 +42,9 @@ $(document).ready(function(){
 
 function produceStoryList(storyList){
   storyList = JSON.parse(storyList);
+  console.log(storyList)
   for(var i=0; i<storyList.length; i++){
     story = storyList[i];
-    $("#StoryList").append("<a class='storyClass'id='story"+i+"' href='/story'><b>" + story.fields.story_name + "</b></a><br>");
+    $("#StoryList").append("<a class='storyClass'id='story"+story.pk+"' href='/story'><b>" + story.fields.story_name + "</b></a><br>");
   }
 }
