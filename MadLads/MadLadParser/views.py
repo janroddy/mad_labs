@@ -47,7 +47,7 @@ def display_StoryList_Random(request):
     print("-----%s was called-----" % inspect.stack()[0][3])
     global controller
     controller = Controller.Controller('Random')
-    return render(request, 'story-list.html')
+    return render(request, 'story.html')
 
 #END SPECIFIC CATEGORIES
 
