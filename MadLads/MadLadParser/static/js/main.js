@@ -61,7 +61,7 @@ function produceInputForms(str) {
 	arr = str.split(',');
 	for (var i = 0; i < arr.length; i++) {
 		$("form").append("<label for='box" + i + "'> Enter a " + arr[i] + "</label>" + "<br>");
-		$("form").append("<input id='box" + i + "'>" + "<br>");
+		$("form").append("<input id='box" + i + "'required>" + "<br>");
 	}
 }
 
