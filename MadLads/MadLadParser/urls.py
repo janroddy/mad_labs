@@ -14,6 +14,10 @@ urlpatterns = [
     url(r'^show/$', views.display_ShowStory, name='display_ShowStory'),
 
     url(r'^set/$', views.set_story, name='set_story'),
-    url(r'^StoryList/$', views.display_StoryList, name='display_StoryList'),
     url(r'^get/story-list/$', views.get_storyList, name='get_storyList'),
+
+    url(r'^StoryList-Classics/$', views.display_StoryList_Classics, name='display_StoryList_Classics'),
+    url(r'^StoryList-by-Sean/$', views.display_StoryList_by_Sean, name='display_StoryList_by_Sean'),
+    url(r'^StoryList-All-Titles/$', views.display_StoryList_All_Titles, name='display_StoryList_All_Titles'),
+    url(r'^StoryList-Random/$', views.display_StoryList_Random, name='display_StoryList_Random'),
 ]
