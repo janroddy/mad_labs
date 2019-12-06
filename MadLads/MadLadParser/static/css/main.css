@@ -109,6 +109,11 @@ li a:hover {
   text-decoration: underline;
 }
 
+#StoryList {
+  font-size: 24px;
+
+}
+
 #story-title {
   text-align: center;
 }
