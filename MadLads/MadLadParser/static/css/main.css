@@ -7,23 +7,29 @@ h1 {
   font-size: 35px;
 }
 
-
-
+ 
 #choose-story {
   background-color: white;
   color: black;
   border: 2px solid;
   padding: 16px;
   font-size: 25px;
-  margin-left: 600px;
+  margin-left: -250px;
   text-align: center;
+
 
 
 }
 
 #choose-story:hover {
-  color: #0099cc;
+ /* color: #0099cc; */
+  color: orange;
 
+}
+
+.copyright {
+  float: right;
+  padding-bottom: -50px;
 }
 
 .column {
@@ -43,12 +49,12 @@ h1 {
 
 .container {
   padding-top: 50px;
-  max-width: 500px;
+  max-width: 600px;
 
 }
 
 .container button{
-  background-color: white;
+  background-color: white ;
   color: black;
   border: 2px solid;
 
@@ -63,6 +69,10 @@ h1 {
 
 .intro-message {
 	text-align: center;
+}
+
+.header {
+ 
 }
 
 .homepage-container {
@@ -80,7 +90,7 @@ h1 {
 }
 
 #mad-bunny {
-  padding-left: 100px;
+  background-repeat: no-repeat ;
 }
 
 ul {
@@ -93,6 +103,7 @@ ul {
 
 li {
   float: right;
+  font-size: 16px;
 }
 
 li a {
@@ -109,6 +120,22 @@ li a:hover {
   text-decoration: underline;
 }
 
+.cat-footer {
+   background-color: orange;
+   padding-top: 600px;
+
+
+
+}
+.site-footer {
+  background-color: orange;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 80px;
+
+
+}
+
 #StoryList {
   font-size: 24px;
 
@@ -122,3 +149,5 @@ li a:hover {
   text-align: center;
   padding: 50px;
 }
+
+
