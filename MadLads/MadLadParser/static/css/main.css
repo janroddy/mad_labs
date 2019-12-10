@@ -17,8 +17,6 @@ h1 {
   margin-left: -250px;
   text-align: center;
 
-
-
 }
 
 #choose-story:hover {
@@ -121,14 +119,14 @@ li a:hover {
 }
 
 .cat-footer {
-   background-color: orange;
+   /*background-color: orange; */
    padding-top: 600px;
 
 
 
 }
 .site-footer {
-  background-color: orange;
+ /* background-color: orange; */
   margin-top: 50px;
   margin-bottom: 0px;
   padding: 80px;
